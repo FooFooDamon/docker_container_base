@@ -4,7 +4,7 @@
 
 $SUDO apt update
 $SUDO apt install -y language-pack-zh-hans language-pack-zh-hant
-echo "export LANG=zh_CN.UTF-8" >> $HOME/.bashrc
+[ `grep "LANG=zh_CN\.UTF\-8" $HOME/.bashrc -c` -eq 0 ] && echo "export LANG=zh_CN.UTF-8" >> $HOME/.bashrc
 $SUDO apt install -y perl expect
 $SUDO apt install -y gcc g++ make cmake
 $SUDO apt install -y automake autoconf libtool pkg-config flex bison
