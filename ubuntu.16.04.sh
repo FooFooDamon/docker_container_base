@@ -16,7 +16,10 @@ $SUDO apt install -y vim ctags
 
 $SUDO apt install -y git
 
-$SUDO apt install net-tools # for ifconfig command
+$SUDO apt install -y parallel jq
+
+# ifconfig in net-tools
+$SUDO apt install -y net-tools curl wget
 
 $SUDO apt install -y openssh-server
 $SUDO sed -i "/^[#]\{0,1\}[ ]\{0,\}\(PermitRootLogin \).*/s//\1yes/g" /etc/ssh/sshd_config
