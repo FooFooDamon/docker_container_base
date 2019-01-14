@@ -16,6 +16,8 @@ $SUDO apt install -y vim ctags
 
 $SUDO apt install -y git
 
+$SUDO apt install net-tools # for ifconfig command
+
 $SUDO apt install -y openssh-server
 $SUDO sed -i "/^[#]\{0,1\}[ ]\{0,\}\(PermitRootLogin \).*/s//\1yes/g" /etc/ssh/sshd_config
 $SUDO sed -i "/^[#]\{0,1\}[ ]\{0,\}\(UsePAM \).*/s//\1no/g" /etc/ssh/sshd_config
