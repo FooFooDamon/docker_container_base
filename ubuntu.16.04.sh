@@ -1,6 +1,8 @@
 #!/bin/bash
 
-[ -z "$USER" ] && SUDO="" || SUDO=sudo
+[[ -z "$USER" || "$USER" = "root" ]] && SUDO="" || SUDO=sudo
+
+[ $(ls -l /etc/localtime | grep -i shanghai -c) -gt 0 ] || ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 $SUDO apt update
 
