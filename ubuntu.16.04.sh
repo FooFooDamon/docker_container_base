@@ -18,7 +18,7 @@ $SUDO apt install -y vim ctags
 
 $SUDO apt install -y git
 
-$SUDO apt install -y parallel jq
+$SUDO apt install -y parallel jq dos2unix zip unzip
 
 # ifconfig in net-tools
 $SUDO apt install -y net-tools curl wget
