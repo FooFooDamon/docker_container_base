@@ -25,12 +25,12 @@ $SUDO apt install -y parallel jq dos2unix zip unzip
 # ifconfig in net-tools
 $SUDO apt install -y net-tools curl wget
 
-$SUDO apt install -y openssh-server
-$SUDO sed -i "/^[#]\{0,1\}[ ]\{0,\}\(PermitRootLogin \).*/s//\1yes/g" /etc/ssh/sshd_config
-$SUDO sed -i "/^[#]\{0,1\}[ ]\{0,\}\(UsePAM \).*/s//\1no/g" /etc/ssh/sshd_config
-$SUDO service ssh start
-[ $(grep "service ssh start" ~/.bashrc -c) -gt 0 ] || echo '[ $(ps -ef | grep [s]shd -c) -gt 0 ] || service ssh start' >> $HOME/.bashrc
-echo "** Remember to set the password first for the current user if you want to login via SSH !!!" >&2
+#$SUDO apt install -y openssh-server
+#$SUDO sed -i "/^[#]\{0,1\}[ ]\{0,\}\(PermitRootLogin \).*/s//\1yes/g" /etc/ssh/sshd_config
+#$SUDO sed -i "/^[#]\{0,1\}[ ]\{0,\}\(UsePAM \).*/s//\1no/g" /etc/ssh/sshd_config
+#$SUDO service ssh start
+#[ $(grep "service ssh start" ~/.bashrc -c) -gt 0 ] || echo '[ $(ps -ef | grep [s]shd -c) -gt 0 ] || service ssh start' >> $HOME/.bashrc
+#echo "** Remember to set the password first for the current user if you want to login via SSH !!!" >&2
 
 mkdir -p $HOME/bin $HOME/etc $HOME/include $HOME/lib $HOME/src
 
