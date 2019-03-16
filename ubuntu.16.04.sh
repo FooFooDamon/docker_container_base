@@ -12,7 +12,7 @@ $SUDO apt install -y language-pack-zh-hans language-pack-zh-hant
 $SUDO apt install -y perl expect xterm
 
 $SUDO apt install -y gcc g++ make cmake
-$SUDO apt install -y automake autoconf libtool pkg-config flex bison
+$SUDO apt install -y automake autoconf build-essential libtool pkg-config flex bison
 $SUDO apt install -y gdb apport
 [ `grep "ulimit -c unlimited" $HOME/.bashrc -c` -eq 0 ] && echo "ulimit -c unlimited" >> $HOME/.bashrc
 
