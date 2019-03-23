@@ -5,7 +5,7 @@
 echo -e "\e[0;33mNOTE: Add the option of '-v /etc/localtime:/etc/localtime:ro' while running 'docker run' to set the time zone correctly!!!\e[0m" >&2
 #[ $(ls -l /etc/localtime | grep -i shanghai -c) -gt 0 ] || ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-$SUDO sed -i "/archive\.ubuntu/s//cn.archive.ubuntu/g" /etc/apt/sources.list
+$SUDO sed -i "/\(\/\/\)\(archive\.ubuntu\)/s//\1cn.\2/g" /etc/apt/sources.list
 $SUDO apt update
 
 # Avoid interactive package installers such as tzdata.
